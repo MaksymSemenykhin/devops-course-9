@@ -1,11 +1,13 @@
 var http = require('http');
 const url = require('url');
-
+let branchParser =  require('branchParser');
 http.createServer(function (req, res) { ////create a server object:
 
   const queryObject = url.parse(req.url,true).query;
-  console.log(queryObject);
 
+  console.log(queryObject);
+  console.log(branchParser.splitSentences(queryObject.branch));
+  
   res.write('Hello World!'); //write a response to the client
   res.end(); //end the response
 
