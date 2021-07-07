@@ -7,8 +7,9 @@ http.createServer(function (req, res) { ////create a server object:
   
   const queryObject = url.parse(req.url,true).query;
 
-//   console.log(queryObject);
-  console.log(queryObject.branch);
+  console.log(queryObject);
+//   console.log(queryObject.branch);
+  
 //   console.log(branchParser.splitSentences(queryObject.branch));
   
   res.write('Hello World!'); //write a response to the client
