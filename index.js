@@ -3,7 +3,8 @@ const url = require('url');
 let branchParser =  require('./branch-parser');
 
 http.createServer(function (req, res) { ////create a server object:
-
+  console.log(req.url);
+  
   const queryObject = url.parse(req.url,true).query;
 
 //   console.log(queryObject);
