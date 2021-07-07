@@ -2,7 +2,8 @@
 
 
 let splitSentences = function (text) {
-  return text.split(',');
+  if(text)
+    return text.split(',');
 };
 
 
